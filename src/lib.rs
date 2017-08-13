@@ -1,7 +1,7 @@
 extern crate robust_subtract;
 //Robust Compare
 pub fn compare(a: &[f64], b: &[f64]) -> f64 {
-    *(robust_subtract::robust_subtract(a, b).last().unwrap())
+    *(robust_subtract::subtract(a, b).last().unwrap())
 }
 
 
