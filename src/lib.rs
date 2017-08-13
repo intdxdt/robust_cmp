@@ -1,13 +1,13 @@
 extern crate robust_subtract;
 //Robust Compare
-pub fn compare(a: &[f64], b: &[f64]) -> f64 {
+pub fn robust_compare(a: &[f64], b: &[f64]) -> f64 {
     *(robust_subtract::robust_subtract(a, b).last().unwrap())
 }
 
 
 #[cfg(test)]
 mod test_robust_compare {
-    use super::compare as cmp;
+    use super::robust_compare as cmp;
 
     #[test]
     fn test_robust_cmp() {
